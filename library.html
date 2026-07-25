@@ -147,129 +147,62 @@ body:before{
 </style>
 
 
-<style id="v56-library-real-bookshelf-fix">
-/* v56 - kütüphaneyi tekrar geniş kitaplı ve daha net mantarlı hale getirir */
-.library-wrap{
-  width:min(1220px,92vw) !important;
-  margin:26px auto 70px !important;
-  padding:0 !important;
-  background:transparent !important;
-  border:0 !important;
-  box-shadow:none !important;
-}
-.library-wrap::before{
-  content:"" !important;
-  position:absolute !important;
-  right:54px !important;
-  top:-76px !important;
-  width:118px !important;
-  height:54px !important;
+<style id="v56-library-soft-wide-books">
+/* v56 - kütüphane sayfasını soft giriş paletine bağlar, mantarı kaldırır, kitapları genişletir */
+html,body{
   background:
-    radial-gradient(circle at 26px 24px,#fff0b8 0 8px,transparent 9px),
-    radial-gradient(circle at 74px 18px,#fff0b8 0 9px,transparent 10px),
-    radial-gradient(circle at 96px 34px,#fff0b8 0 7px,transparent 8px),
-    linear-gradient(180deg,#e35b48 0 64%,#bf3b32 64% 100%) !important;
-  border:5px solid #2b1b12 !important;
-  box-shadow:7px 7px 0 rgba(0,0,0,.38) !important;
-  clip-path:polygon(10% 35%,24% 12%,48% 0,76% 9%,92% 35%,92% 100%,8% 100%) !important;
-  z-index:4 !important;
+    linear-gradient(90deg, rgba(126,184,214,.045) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(143,202,167,.035) 1px, transparent 1px),
+    linear-gradient(180deg,#82b9d8 0%,#74acce 36%,#102136 37%,#08111f 100%) !important;
+  background-size:32px 32px,32px 32px,100% 100% !important;
 }
-.library-wrap::after{
-  content:"" !important;
-  position:absolute !important;
-  right:91px !important;
-  top:-30px !important;
-  width:44px !important;
-  height:47px !important;
-  background:linear-gradient(180deg,#f5db83,#d7a84e) !important;
-  border:5px solid #2b1b12 !important;
-  box-shadow:7px 7px 0 rgba(0,0,0,.32) !important;
-  z-index:3 !important;
+.header h1{
+  color:#f5dda1 !important;
+  text-shadow:3px 3px 0 rgba(16,33,54,.65) !important;
 }
-.controls{
-  width:min(1080px,92vw) !important;
-  margin:0 auto 18px !important;
-  padding:0 8px !important;
-}
-.controls input{
-  width:min(560px,100%) !important;
-  padding:13px 18px !important;
-  border:3px solid rgba(106,71,42,.70) !important;
-  background:#fff3cf !important;
-  color:#402a1c !important;
-  box-shadow:4px 4px 0 rgba(0,0,0,.25) !important;
-  border-radius:0 !important;
-}
-.controls .count{color:#ffe0a2 !important;text-shadow:2px 2px 0 #2b1b12 !important;}
-.rail{
-  width:min(1120px,92vw) !important;
-  margin:0 auto !important;
-  display:flex !important;
-  flex-wrap:wrap !important;
-  align-items:flex-end !important;
-  justify-content:center !important;
-  gap:34px 18px !important;
-  padding:38px 26px 42px !important;
-  min-height:720px !important;
-  border:10px solid #2b1b12 !important;
-  background:
-    linear-gradient(90deg, rgba(255,230,106,.045) 1px, transparent 1px),
-    linear-gradient(0deg, rgba(255,230,106,.035) 1px, transparent 1px),
-    linear-gradient(to bottom, #8b542a 0 32%, #432716 32% 35%, #8b542a 35% 67%, #432716 67% 70%, #8b542a 70% 100%) !important;
-  background-size:24px 24px,24px 24px,100% 100% !important;
-  box-shadow:12px 12px 0 rgba(0,0,0,.36), inset 0 0 0 5px #c6853f !important;
-}
-.book{
-  width:108px !important;
-  min-width:108px !important;
-  height:282px !important;
-  min-height:282px !important;
-  padding:0 !important;
-  background:transparent !important;
-  border:0 !important;
-  box-shadow:none !important;
-  overflow:visible !important;
-  transform:rotate(var(--rot)) !important;
-  filter:drop-shadow(8px 10px 0 rgba(0,0,0,.36)) !important;
-}
-.book:hover{
-  transform:translateY(-7px) rotate(var(--rot)) !important;
-  filter:drop-shadow(9px 12px 0 rgba(0,0,0,.44)) brightness(1.08) !important;
-}
-.spine{
-  width:98px !important;
-  height:258px !important;
-  margin:0 auto !important;
-  border:5px solid #1d1210 !important;
-  border-radius:0 !important;
-  box-shadow:inset 8px 0 0 rgba(0,0,0,.23), inset -5px 0 0 rgba(255,255,255,.07), 5px 5px 0 rgba(0,0,0,.30) !important;
-}
-.title{
-  width:82px !important;
-  font-size:.82rem !important;
-  line-height:.98 !important;
-  letter-spacing:.02em !important;
-}
-.author{
-  width:80px !important;
-  font-size:.58rem !important;
-  line-height:.98 !important;
-}
-.spine:before,.spine:after{border-radius:0 !important;}
-.header h1{font-size:clamp(2rem,4.5vw,4rem) !important;}
 .header a{
-  background:#10204a !important;
-  border:3px solid #68d8ff !important;
-  box-shadow:5px 5px 0 #02030a !important;
-  border-radius:0 !important;
+  background:rgba(8,18,35,.78) !important;
+  border:2px solid rgba(126,184,214,.75) !important;
+  color:#f5dda1 !important;
+  box-shadow:4px 4px 0 rgba(0,0,0,.25) !important;
 }
-@media(max-width:780px){
-  .book{width:86px !important;min-width:86px !important;height:230px !important;min-height:230px !important;}
-  .spine{width:80px !important;height:210px !important;}
-  .title{width:68px !important;font-size:.68rem !important;}
-  .author{width:66px !important;font-size:.50rem !important;}
-  .rail{gap:24px 12px !important;padding:28px 14px 34px !important;}
-  .library-wrap::before,.library-wrap::after{display:none !important;}
+.search{
+  background:rgba(141,100,62,.74) !important;
+  border:5px solid rgba(49,32,22,.85) !important;
+  box-shadow:8px 8px 0 rgba(0,0,0,.25) !important;
+}
+.search input{
+  background:rgba(245,236,200,.86) !important;
+  color:#253247 !important;
+  border:2px solid rgba(126,184,214,.58) !important;
+}
+.library-wrap{
+  width:min(1120px,92vw) !important;
+  background:
+    linear-gradient(90deg, rgba(245,221,161,.035) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(245,221,161,.028) 1px, transparent 1px),
+    linear-gradient(180deg,#8a5b34,#6d4325) !important;
+  background-size:28px 28px,28px 28px,100% 100% !important;
+  border:7px solid #2c2018 !important;
+  box-shadow:10px 10px 0 rgba(0,0,0,.28), inset 0 0 0 3px rgba(245,221,161,.26) !important;
+}
+.library-wrap::before{display:none !important;content:none !important;}
+.rail{gap:34px 18px !important;}
+.book{
+  width:clamp(54px,5.3vw,72px) !important;
+  height:clamp(148px,14vw,178px) !important;
+  padding:12px 6px !important;
+  font-size:.70rem !important;
+  line-height:1 !important;
+  border:3px solid rgba(32,22,18,.9) !important;
+  box-shadow:5px 6px 0 rgba(0,0,0,.30) !important;
+  filter:saturate(.93) contrast(.98) !important;
+}
+.book:hover{filter:saturate(1.02) brightness(1.08) !important;transform:translateY(-5px) !important;}
+.modal-card{
+  background:linear-gradient(180deg,#102136,#07111f) !important;
+  border:3px solid rgba(126,184,214,.7) !important;
+  color:#f5dda1 !important;
 }
 </style>
 
