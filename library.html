@@ -277,5 +277,10 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();});
 document.getElementById('search').addEventListener('input',e=>{const q=e.target.value.toLocaleLowerCase('tr-TR');render(books.filter(b=>[b.title,b.artist,b.genre,b.publisher].join(' ').toLocaleLowerCase('tr-TR').includes(q)));});
 render(books);
 </script>
+
+<style id="v61-library-no-black-fallback">
+html,body{background:linear-gradient(180deg,#638fe0,#b4a6ee) !important;} body:before,body::before{opacity:.18 !important;}
+</style>
+
 </body>
 </html>
