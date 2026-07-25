@@ -45,6 +45,60 @@ body:before{content:"";position:fixed;inset:0;pointer-events:none;background:rad
 
 .cover .fallback-cover{min-height:260px;display:grid;place-items:center;padding:22px;border:6px solid rgba(58,36,20,.60);background:linear-gradient(145deg,#4b2d15,#1d120c);color:#f8da8b;text-align:center;line-height:1.35;font-size:1.05rem;}
 </style>
+
+<style id="v54-library-no-fabric-pixel-theme">
+/* v54 - kütüphane sayfasında kumaşsız/pixel devam */
+html,body{
+  background:
+    linear-gradient(90deg, rgba(104,216,255,.05) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(122,92,255,.05) 1px, transparent 1px),
+    radial-gradient(circle at 18% 12%, rgba(104,216,255,.25), transparent 28%),
+    radial-gradient(circle at 80% 15%, rgba(255,230,106,.18), transparent 22%),
+    linear-gradient(180deg,#7fb5de 0,#5c98cc 32%,#071026 33%,#050711 100%) !important;
+  background-size:26px 26px,26px 26px,100% 100%,100% 100%,100% 100% !important;
+  color:#fff4bb !important;
+}
+body:before{
+  background:linear-gradient(90deg, rgba(255,255,255,.07) 1px, transparent 1px),linear-gradient(0deg, rgba(255,255,255,.05) 1px, transparent 1px) !important;
+  background-size:28px 28px !important;
+  opacity:.28 !important;
+}
+.header{border-bottom:0 !important;}
+.header h1{color:#ffe66a !important;text-shadow:4px 4px 0 #243b73,0 0 20px rgba(255,230,106,.25) !important;}
+.header a,.search input,.book,.modal-card,.detail-art{
+  border-radius:0 !important;
+}
+.header a{
+  background:#10204a !important;border:3px solid #68d8ff !important;color:#fff4bb !important;box-shadow:4px 4px 0 #02030a !important;
+}
+.search{background:#8f5a2e !important;border:6px solid #2b1b12 !important;box-shadow:8px 8px 0 rgba(0,0,0,.35) !important;}
+.search input{background:#fff3cf !important;color:#402a1c !important;border:4px solid #6a472a !important;}
+.rail,.library-wrap{
+  background-image:none !important;
+}
+.library-wrap{
+  background:#7d4e29 !important;
+  border:8px solid #2b1b12 !important;
+  box-shadow:12px 12px 0 rgba(0,0,0,.38), inset 0 0 0 4px #c6853f !important;
+}
+.shelf,.shelf-row{background:#4d2f1b !important;border-radius:0 !important;box-shadow:0 8px 0 #2c1a10 !important;}
+.book{
+  background-image:none !important;
+  image-rendering:pixelated;
+  border:4px solid #1d1210 !important;
+  box-shadow:5px 5px 0 rgba(0,0,0,.45) !important;
+}
+.book:hover{filter:brightness(1.13) saturate(1.12) !important;}
+.modal-card{
+  background:linear-gradient(180deg,#0f193f,#070b1d) !important;
+  color:#fff4bb !important;
+  border:4px solid #68d8ff !important;
+  box-shadow:0 0 0 4px #02030a, 0 28px 0 rgba(0,0,0,.42) !important;
+}
+.detail-art{background:#090e24 !important;border:3px solid rgba(255,230,106,.55) !important;}
+.close{background:#101b45 !important;border:2px solid #68d8ff !important;color:#fff4bb !important;border-radius:0 !important;}
+</style>
+
 </head>
 <body>
 <header class="header"><h1>KÜTÜPHANE</h1><a href="./index.html">Ana sahafa dön</a></header>
