@@ -247,6 +247,21 @@ a{color:inherit}
 .fish-bubble{position:fixed;left:78px;bottom:88px;display:none;z-index:21;background:#dcf8ff;border:4px solid #24445e;padding:8px;border-radius:50%;box-shadow:4px 4px 0 rgba(0,0,0,.25)}
 .fish-bubble img{width:44px;image-rendering:pixelated}
 .cat-area.active .fish-bubble{display:block}
+
+.fish-bubble{cursor:pointer;transition:transform .12s ease;}
+.fish-bubble:hover{transform:translateY(-4px) scale(1.06);}
+.cat.cat-run{
+  animation:catRun 1.15s steps(6) 1;
+}
+@keyframes catRun{
+  0%{transform:translateX(0) translateY(0) scaleX(1)}
+  18%{transform:translateX(26px) translateY(-6px) scaleX(1)}
+  38%{transform:translateX(86px) translateY(0) scaleX(1)}
+  58%{transform:translateX(126px) translateY(-8px) scaleX(1)}
+  78%{transform:translateX(64px) translateY(0) scaleX(-1)}
+  100%{transform:translateX(0) translateY(0) scaleX(1)}
+}
+
 @media(max-width:800px){
  .hero{min-height:63vw}
  .hero img{min-height:63vw}
@@ -343,9 +358,24 @@ a{color:inherit}
   });
   const cat=document.getElementById('cat');
   const area=document.getElementById('catArea');
-  if(cat) cat.addEventListener('click',()=>{
-    area.classList.toggle('active');
-    setTimeout(()=>area.classList.remove('active'),4000);
+  const fishBubble=document.getElementById('fishBubble');
+  let hideFishTimer=null;
+  function showFish(){
+    area.classList.add('active');
+    clearTimeout(hideFishTimer);
+    hideFishTimer=setTimeout(()=>area.classList.remove('active'),5000);
+  }
+  function runCat(){
+    if(!cat) return;
+    cat.classList.remove('cat-run');
+    void cat.offsetWidth;
+    cat.classList.add('cat-run');
+    showFish();
+  }
+  if(cat) cat.addEventListener('click',showFish);
+  if(fishBubble) fishBubble.addEventListener('click',(event)=>{
+    event.stopPropagation();
+    runCat();
   });
 })();
 </script>

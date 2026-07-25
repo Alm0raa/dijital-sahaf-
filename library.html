@@ -218,6 +218,45 @@ html,body{background:linear-gradient(180deg,#82c9dd,#a7dce7) !important;}
 html,body{background:linear-gradient(180deg,#6290df,#b0a7ec) !important;}
 body::before{opacity:.28 !important;}
 </style>
+
+<style id="v63-library-straight-alignment">
+/* v63 - kitapları hizalı yapar: yamuk/rotasyon yok, aynı taban çizgisi */
+.rail{
+  display:flex !important;
+  flex-wrap:wrap !important;
+  align-items:flex-end !important;
+  justify-content:center !important;
+  gap:22px 16px !important;
+  padding:36px 28px 34px !important;
+}
+.book{
+  width:94px !important;
+  height:260px !important;
+  min-height:260px !important;
+  display:flex !important;
+  align-items:flex-end !important;
+  justify-content:center !important;
+  transform:none !important;
+  rotate:0deg !important;
+  filter:drop-shadow(7px 10px 6px rgba(0,0,0,.34)) !important;
+  margin:0 !important;
+  vertical-align:bottom !important;
+}
+.book:hover{
+  transform:translateY(-7px) !important;
+  rotate:0deg !important;
+  filter:drop-shadow(7px 14px 7px rgba(0,0,0,.44)) brightness(1.08) !important;
+}
+.spine{
+  width:92px !important;
+  height:238px !important;
+  margin:0 auto !important;
+  transform:none !important;
+  rotate:0deg !important;
+  align-self:flex-end !important;
+}
+</style>
+
 </head>
 <body>
 <header class="header"><h1>KÜTÜPHANE</h1><a href="./index.html">Ana sahafa dön</a></header>
@@ -258,7 +297,7 @@ function field(label,value){if(!value)return '';return `<div class="label">${lab
 function render(list){
   document.getElementById('count').textContent=list.length;
   const rail=document.getElementById('rail');
-  rail.innerHTML=list.map((b,i)=>{const bg=colorFor(b.title,i);return `<article class="book" data-idx="${i}" style="--rot:${[-2,-1,.8,1.4,-.6,2][i%6]}deg;--book-color:${bg};--book-gold:${goldFor(bg,i)};--title-size:${titleSize(b.title)}"><div class="spine"><div class="band top"></div><div class="title">${esc((b.title||'').toUpperCase())}</div><div class="author">${esc(b.artist||'')}</div><div class="band bottom"></div></div></article>`}).join('');
+  rail.innerHTML=list.map((b,i)=>{const bg=colorFor(b.title,i);return `<article class="book" data-idx="${i}" style="--rot:0deg;--book-color:${bg};--book-gold:${goldFor(bg,i)};--title-size:${titleSize(b.title)}"><div class="spine"><div class="band top"></div><div class="title">${esc((b.title||'').toUpperCase())}</div><div class="author">${esc(b.artist||'')}</div><div class="band bottom"></div></div></article>`}).join('');
   rail.querySelectorAll('.book').forEach((el,idx)=>el.addEventListener('click',()=>openBook(list[idx])));
 }
 function openBook(b){
